@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 import com.example.geektrust.Controller.MetroCardController;
+import com.example.geektrust.Controller.StationController;
 import com.example.geektrust.Controller.TravelController;
 import com.example.geektrust.Model.AirportStation;
 import com.example.geektrust.Model.CentralStation;
@@ -21,6 +22,7 @@ public class Main {
     static MetroCardRepository metroCardRepository = new MetroCardRepository();
     static StationRepository airportPassengerSummary = new StationRepository();
     static StationRepository centralPassengerSummary = new StationRepository();
+    static StationController stationController = new StationController();
 
     public static void parseInputAndExecute( String input )
     {
@@ -46,9 +48,9 @@ public class Main {
                                                         centralPassengerSummary  );
                     break;
                 case "PRINT_SUMMARY":
-                    travelController.getPassengerSummaryAndPrint( airportPassengerSummary, centralPassengerSummary,
-                                                        stationAirport, stationCentral, 
-                                                        travelController );
+                    stationController.getPassengerSummaryAndPrint( airportPassengerSummary, centralPassengerSummary,
+                                                                stationAirport, stationCentral, 
+                                                                travelController );
                     break;
                 }
     }

@@ -12,7 +12,7 @@ public abstract class Station {
     {
         return totalFareStation;
     }
-    public void setTotalCollection( int totalFareStation )
+    private void setTotalCollection( int totalFareStation )
     {
         this.totalFareStation = totalFareStation;
     }
@@ -20,7 +20,7 @@ public abstract class Station {
     {
         return totalDiscountStation;
     }
-    public void setTotalDiscount( int totalDiscountStation )
+    private void setTotalDiscount( int totalDiscountStation )
     {
         this.totalDiscountStation = totalDiscountStation;
     }

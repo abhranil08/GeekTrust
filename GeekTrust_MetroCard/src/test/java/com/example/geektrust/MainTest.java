@@ -11,6 +11,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import com.example.geektrust.Controller.MetroCardController;
+import com.example.geektrust.Controller.StationController;
 import com.example.geektrust.Controller.TravelController;
 import com.example.geektrust.Model.AirportStation;
 import com.example.geektrust.Model.CentralStation;
@@ -30,6 +31,7 @@ public class MainTest {
     static MetroCardController metroCardController;
     static StationRepository airportPassengerSummary;
     static StationRepository centralPassengerSummary;
+    static StationController stationController;
     TravelRepository travelRepository;
     MetroCardRepository metroCardRepository;
 
@@ -45,6 +47,7 @@ public class MainTest {
         stationCentral = new CentralStation();
         airportPassengerSummary = new StationRepository();
         centralPassengerSummary = new StationRepository();
+        stationController = new StationController();
     }
 
     @Test
@@ -82,7 +85,7 @@ public class MainTest {
         travelController.ExecuteCheckIn( "MC4", Constants.ADULT, Constants.AIRPORT, stationAirport, airportPassengerSummary  );
         travelController.ExecuteCheckIn( "MC5", Constants.KID, Constants.AIRPORT, stationAirport, airportPassengerSummary  );
         
-        travelController.getPassengerSummaryAndPrint( airportPassengerSummary, centralPassengerSummary,
+        stationController.getPassengerSummaryAndPrint( airportPassengerSummary, centralPassengerSummary,
                                             stationAirport, stationCentral, 
                                             travelController );
 
@@ -187,7 +190,7 @@ public class MainTest {
         travelController.ExecuteCheckIn( "MC2", Constants.KID, Constants.CENTRAL, stationCentral, centralPassengerSummary  );
         travelController.ExecuteCheckIn( "MC3", Constants.KID, Constants.CENTRAL, stationCentral, centralPassengerSummary  );
         
-        travelController.getPassengerSummaryAndPrint( airportPassengerSummary, centralPassengerSummary,
+        stationController.getPassengerSummaryAndPrint( airportPassengerSummary, centralPassengerSummary,
                                             stationAirport, stationCentral, 
                                             travelController );
 
@@ -235,7 +238,7 @@ public class MainTest {
         assertEquals(600, stationAirport.getTotalCollection());
         assertEquals(0, stationCentral.getTotalCollection());
 
-        travelController.getPassengerSummaryAndPrint( airportPassengerSummary, centralPassengerSummary,
+        stationController.getPassengerSummaryAndPrint( airportPassengerSummary, centralPassengerSummary,
                                             stationAirport, stationCentral, 
                                             travelController );
     }
@@ -408,7 +411,7 @@ public class MainTest {
         stationRepository.setPassengerTypeCount(Constants.ADULT);
         stationRepository.setPassengerTypeCount(Constants.KID);
 
-        ArrayList<Pair> passengerSummary = travelController.getPassengerSummary( stationRepository );
+        ArrayList<Pair> passengerSummary = stationController.getPassengerSummary( stationRepository );
         assertEquals(2, passengerSummary.size());
     }
 
@@ -550,5 +553,19 @@ public class MainTest {
         assertEquals( "C", unsortedList.get(0).getKey() );
         assertEquals( "A", unsortedList.get(1).getKey() );
         assertEquals( "B", unsortedList.get(2).getKey() );
+    }
+
+    @Test
+    public void TestForConstants()
+    {
+        assertEquals("ADULT", Constants.ADULT);
+        assertEquals("SENIOR_CITIZEN", Constants.SENIOR_CITIZEN);
+        assertEquals("KID", Constants.KID);
+        assertEquals(200, Constants.ADULT_COST);
+        assertEquals(100, Constants.SENIOR_CITIZEN_COST);
+        assertEquals(50, Constants.KIDS_COST);
+
+        assertEquals("CENTRAL", Constants.CENTRAL);
+        assertEquals("AIRPORT", Constants.AIRPORT);
     }
 }
