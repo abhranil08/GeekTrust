@@ -77,6 +77,8 @@ public class MainTest {
 
         assertEquals("WOO@GMAIL.COM", employeeWoo.getEmailId());
         assertEquals("WOO", employeeWoo.getName());
+
+        assertEquals( course.getRegisteredEmployeesSize() , 2);
     }
 
     @Test
