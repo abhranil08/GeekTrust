@@ -1,9 +1,10 @@
 # LLD - Course Scheduling 
 Problem statement : The head of the Learning management system (LMS) has hired you as a consultant. The LMS team has the goal of upskilling the employees with the latest topics via courses. You need to help build a system to schedule and manage the courses. 
 
-Current Geektrust score - 98. This LLD design earned all the badges - READABILITY, MAINTAINABILITY, FUNCTIONAL / OOP MODELLING, TESTS, CORRECTNESS, BUILD.
+Current Geektrust score - 100. This LLD design earned all the badges - READABILITY, MAINTAINABILITY, FUNCTIONAL / OOP MODELLING, TESTS, CORRECTNESS, BUILD.
 
-<img width="1240" alt="Screenshot 2023-02-28 at 7 39 08 AM" src="https://user-images.githubusercontent.com/17013083/221734861-568b7d1c-2236-4c9a-8739-d16e7c81439f.png">
+<img width="1231" alt="Screenshot 2023-02-28 at 9 45 04 PM" src="https://user-images.githubusercontent.com/17013083/221912696-2f3e383f-2889-442d-8623-24611724a559.png">
+
 
 
 # Pre-requisites
