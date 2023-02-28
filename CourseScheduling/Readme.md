@@ -45,6 +45,7 @@ You can read build instructions [here](https://github.com/geektrust/coding-probl
 3. Implement service classes - Done
 4. Implement error classes - proper handling for different actions - Done
 5. Remove all redundant maps for scalability - Done
-6. Add all tests : >70% coverage, currently its 76% - Done
+6. Add all tests : >70% coverage, currently its 78% - Done
 7. Input error handling - validate inputs differently for 4 services - Done
-8. Remove code duplication : Currently found 2 instances.
+8. Remove code duplication : Currently found 2 instances. - Done
+9. Implement new exception class for INPUT Data Error - Done
