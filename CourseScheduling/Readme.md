@@ -1,3 +1,11 @@
+# LLD - Course Rescheduling 
+Problem statement : The head of the Learning management system (LMS) has hired you as a consultant. The LMS team has the goal of upskilling the employees with the latest topics via courses. You need to help build a system to schedule and manage the courses. 
+
+Current Geektrust score - 98. This LLD design earned all the badges - READABILITY, MAINTAINABILITY, FUNCTIONAL / OOP MODELLING, TESTS, CORRECTNESS, BUILD.
+
+<img width="1240" alt="Screenshot 2023-02-28 at 7 39 08 AM" src="https://user-images.githubusercontent.com/17013083/221734861-568b7d1c-2236-4c9a-8739-d16e7c81439f.png">
+
+
 # Pre-requisites
 * Java 1.8/1.11/1.15
 * Maven
@@ -35,6 +43,7 @@ You can read build instructions [here](https://github.com/geektrust/coding-probl
 2. Implement model classes - Done
 3. Implement service classes - Done
 4. Implement error classes - proper handling for different actions - Done
-5. Implement all maps for scalability
-6. Add all tests : >70% coverage, currently its 38%
+5. Remove all redundant maps for scalability - Done
+6. Add all tests : >70% coverage, currently its 76% - Done
 7. Input error handling - validate inputs differently for 4 services - Done
+8. Remove code duplication : Currently found 2 instances.
